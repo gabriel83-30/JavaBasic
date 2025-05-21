@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>Homework.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #5f826b; font-style: italic;}
+.s5 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Homework.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">structuriRepetitive</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">testng</span><span class="s2">.</span><span class="s1">annotations</span><span class="s2">.</span><span class="s1">Test</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">ArrayList</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Arrays</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">HashMap</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">List</span><span class="s2">;</span>
+
+<span class="s3">//                                              Homework</span>
+<span class="s3">//</span>
+<span class="s3">//    1. Faceti o metoda care  sa gaseasca un cuvant dintr-o lista si cand il gaseste sa il printeze in consola</span>
+<span class="s3">//    Lista de fructe, masini, etc: sa construim o lista</span>
+<span class="s3">//    2. Faceti o metoda care  sa gaseasca un cuvant dintr-un hash map si cand il gaseste sa il printeze in consola</span>
+<span class="s3">//    Hash map de obiecte, animale, etc: sa construim un hashmap</span>
+
+<span class="s3">//    Faceti alte exemple cu hashmap-uri si liste</span>
+
+<span class="s3">// PROBLEMA 1.</span>
+
+<span class="s0">public class </span><span class="s1">Homework </span><span class="s2">{</span>
+
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">testHomework</span><span class="s2">() {</span>
+
+        <span class="s4">/// Problema 1.</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;Rezolvare Problema 1: &quot;</span><span class="s2">);</span>
+<span class="s3">//        fructeLista(); // apelam metoda</span>
+
+        <span class="s1">List</span><span class="s2">&lt;</span><span class="s1">String</span><span class="s2">&gt; </span><span class="s1">fructe </span><span class="s2">= </span><span class="s1">Arrays</span><span class="s2">.</span><span class="s1">asList</span><span class="s2">(</span><span class="s5">&quot;Mere&quot;</span><span class="s2">, </span><span class="s5">&quot;Pere&quot;</span><span class="s2">, </span><span class="s5">&quot;Caise&quot;</span><span class="s2">, </span><span class="s5">&quot;Piersici&quot;</span><span class="s2">);</span>
+        <span class="s3">// - declaram o listă de fructe (List) care va conține elemente de tip String.</span>
+        <span class="s3">// - &quot;Arrays.asList&quot; este o metodă statică din clasa Arrays, care primește elemente  le transformă într-o listă fixă care conține exact acele elemente.</span>
+        <span class="s3">// - lista creata &quot;Arrays.asList&quot;nu se mai poațe adăuga sau elimina elemente.</span>
+        <span class="s1">gasesteCuvantul</span><span class="s2">(</span><span class="s1">fructe</span><span class="s2">, </span><span class="s5">&quot;Mere&quot;</span><span class="s2">);</span>
+        <span class="s1">gasesteCuvantul</span><span class="s2">(</span><span class="s1">fructe</span><span class="s2">, </span><span class="s5">&quot;Kiwi&quot;</span><span class="s2">);</span>
+
+        <span class="s0">boolean </span><span class="s1">rezultatUnu </span><span class="s2">= </span><span class="s1">cautaCuvantul</span><span class="s2">(</span><span class="s1">fructe</span><span class="s2">, </span><span class="s5">&quot;Caise&quot;</span><span class="s2">);</span>
+        <span class="s0">boolean </span><span class="s1">rezultatDoi </span><span class="s2">= </span><span class="s1">cautaCuvantul</span><span class="s2">(</span><span class="s1">fructe</span><span class="s2">, </span><span class="s5">&quot;Mango&quot;</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;Caisele se regasesc in lista - &quot; </span><span class="s2">+ </span><span class="s1">rezultatUnu</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;Mango se regaseste in lista - &quot; </span><span class="s2">+ </span><span class="s1">rezultatDoi</span><span class="s2">);</span>
+
+
+        <span class="s4">/// Problema 2.</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;___________________________________________&quot;</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;Rezolvare Problema 2: &quot;</span><span class="s2">);</span>
+
+        <span class="s1">HashMap</span><span class="s2">&lt;</span><span class="s1">String</span><span class="s2">, </span><span class="s1">String</span><span class="s2">&gt; </span><span class="s1">categoriiObiecte </span><span class="s2">= </span><span class="s0">new </span><span class="s1">HashMap</span><span class="s2">&lt;&gt;();</span>
+        <span class="s1">afisareHashMapObiecte</span><span class="s2">(</span><span class="s1">categoriiObiecte</span><span class="s2">, </span><span class="s5">&quot;Hotel&quot;</span><span class="s2">);</span>
+        <span class="s1">afisareHashMapObiecte</span><span class="s2">(</span><span class="s1">categoriiObiecte</span><span class="s2">, </span><span class="s5">&quot;Studio&quot;</span><span class="s2">);</span>
+
+        <span class="s0">boolean </span><span class="s1">rezultatTrei </span><span class="s2">= </span><span class="s1">cautaCuvantulHashMap</span><span class="s2">(</span><span class="s1">categoriiObiecte</span><span class="s2">, </span><span class="s5">&quot;Garsoniera&quot;</span><span class="s2">);</span>
+        <span class="s0">boolean </span><span class="s1">rezultatPatru </span><span class="s2">= </span><span class="s1">cautaCuvantulHashMap</span><span class="s2">(</span><span class="s1">categoriiObiecte</span><span class="s2">, </span><span class="s5">&quot;Pensiune&quot;</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;Garsoniera se afla in HashMap: &quot; </span><span class="s2">+ </span><span class="s1">rezultatTrei</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;Pensiunea se afla in HashMap: &quot; </span><span class="s2">+ </span><span class="s1">rezultatPatru</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+    <span class="s4">/// Varianta cu &quot;if&quot;</span>
+
+    <span class="s0">public void </span><span class="s1">gasesteCuvantul</span><span class="s2">(</span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">String</span><span class="s2">&gt; </span><span class="s1">fructeLista</span><span class="s2">, </span><span class="s1">String cuvant</span><span class="s2">) {   </span><span class="s3">// - declaram o metoda cu parametrii- o listă de elemente si String &quot;cuvant&quot;: cuvântul pe care vrem să-l cauțam în acea listă.</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">fructeLista</span><span class="s2">.</span><span class="s1">contains</span><span class="s2">(</span><span class="s1">cuvant</span><span class="s2">)) {     </span><span class="s3">// Verifică dacă lista conține cuvântul dat.</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;Cuvantul gasit este: &quot; </span><span class="s2">+ </span><span class="s1">cuvant</span><span class="s2">); </span><span class="s3">// Returnează true dacă îl găsește, altfel false.</span>
+        <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;Cuvantul &quot; </span><span class="s2">+ </span><span class="s1">cuvant </span><span class="s2">+ </span><span class="s5">&quot; nu este in lista. &quot;</span><span class="s2">); </span><span class="s3">//</span>
+        <span class="s2">}</span>
+
+    <span class="s2">}</span>
+
+
+    <span class="s4">/// Varianta cu &quot;boolean&quot;</span>
+    <span class="s0">public boolean </span><span class="s1">cautaCuvantul</span><span class="s2">(</span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">String</span><span class="s2">&gt; </span><span class="s1">fructe</span><span class="s2">, </span><span class="s1">String cuvant</span><span class="s2">) { </span><span class="s4">/// declaram o metoda cu parametrii si return</span>
+        <span class="s0">return </span><span class="s1">fructe</span><span class="s2">.</span><span class="s1">contains</span><span class="s2">(</span><span class="s1">cuvant</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">fructeLista</span><span class="s2">() { </span><span class="s3">// declaram metoda</span>
+
+        <span class="s1">List</span><span class="s2">&lt;</span><span class="s1">String</span><span class="s2">&gt; </span><span class="s1">fructeleDinLista </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ArrayList</span><span class="s2">&lt;&gt;(); </span><span class="s3">// cream un obiect ArrayList</span>
+
+        <span class="s3">// in clasa ArrayList pt a adauga elemente folosim metoda &quot;add()&quot;</span>
+<span class="s3">//        fructeleDinLista.add(&quot;Mere&quot;);</span>
+<span class="s3">//        fructeleDinLista.add(&quot;Pere&quot;);</span>
+<span class="s3">//        fructeleDinLista.add(&quot;Caise&quot;);</span>
+<span class="s3">//        fructeleDinLista.add(&quot;Piersici&quot;);</span>
+<span class="s3">//        fructeleDinLista.add(&quot;Prune&quot;);</span>
+<span class="s3">//        fructeleDinLista.add(&quot;Struguri&quot;);</span>
+<span class="s3">//        fructeleDinLista.add(0, &quot;Banane&quot;); // - inseram un element nou specificand pozitia cu ajutorul indexului.</span>
+<span class="s3">//        fructeleDinLista.add(2, &quot;Kiwi&quot;); // - inseram un element nou specificand pozitia cu ajutorul indexului.</span>
+<span class="s3">//        System.out.println(&quot;Printam toate fructele din ArrayList: &quot; + fructeleDinLista);</span>
+<span class="s3">//        System.out.println(&quot;Printam doar un element din ArrayList si anume: &quot; + fructeleDinLista.get(0)); // - folosim metoda &quot;get()&quot; cu referire la index</span>
+<span class="s3">//        System.out.println(&quot;Printam doar un element din ArrayList si anume: &quot; + fructeleDinLista.get(5));</span>
+
+
+    <span class="s2">}</span>
+
+
+    <span class="s4">/// PROBLEMA 2.</span>
+
+<span class="s3">//    2. Faceti o metoda care  sa gaseasca un cuvant dintr-un hash map si cand il gaseste sa il printeze in consola</span>
+<span class="s3">//    Hash map de obiecte, animale, etc: sa construim un hashmap.</span>
+
+    <span class="s0">public void </span><span class="s1">afisareHashMapObiecte</span><span class="s2">(</span><span class="s1">HashMap</span><span class="s2">&lt;</span><span class="s1">String</span><span class="s2">, </span><span class="s1">String</span><span class="s2">&gt; </span><span class="s1">categoriiObiecte</span><span class="s2">, </span><span class="s1">String cuvantul</span><span class="s2">) {</span>
+        <span class="s3">// - declaram metoda noua cu parametrii, un HashMap care permite asocieri între o cheie</span>
+        <span class="s3">// și o valoare (în acest caz, cuvântul este cheia, iar descrierea este valoarea).</span>
+        <span class="s3">// _ al doilea parametru al metodei este cuvântul pe care dorim să-l căutăm în HashMap si este de tip String.</span>
+        <span class="s3">// - cream obiectul HashMap - &quot;categoriiObiecte&quot; folosind metoda &quot;put&quot; care va stoca cuvinte și descrierea lor.</span>
+
+        <span class="s1">categoriiObiecte</span><span class="s2">.</span><span class="s1">put</span><span class="s2">(</span><span class="s5">&quot;Garsoniera&quot;</span><span class="s2">, </span><span class="s5">&quot;O camera, o bucatarie si o baie.&quot;</span><span class="s2">);</span>
+        <span class="s1">categoriiObiecte</span><span class="s2">.</span><span class="s1">put</span><span class="s2">(</span><span class="s5">&quot;Apartament&quot;</span><span class="s2">, </span><span class="s5">&quot;Doua Camere, o bucatarie, un balcon si o baie.&quot;</span><span class="s2">);</span>
+        <span class="s1">categoriiObiecte</span><span class="s2">.</span><span class="s1">put</span><span class="s2">(</span><span class="s5">&quot;Casa&quot;</span><span class="s2">, </span><span class="s5">&quot;Trei camere, o bucatarie, 2 balcoane, 2 bai si curte.&quot;</span><span class="s2">);</span>
+        <span class="s1">categoriiObiecte</span><span class="s2">.</span><span class="s1">put</span><span class="s2">(</span><span class="s5">&quot;Hotel&quot;</span><span class="s2">, </span><span class="s5">&quot;Zece Camere, zece bai, holuri mari, receptie si curte cu locuri de parcare.&quot;</span><span class="s2">);</span>
+
+        <span class="s4">/// Varianta cu &quot;if&quot;</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">categoriiObiecte</span><span class="s2">.</span><span class="s1">containsKey</span><span class="s2">(</span><span class="s1">cuvantul</span><span class="s2">)) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;Cuvantul gasit :&quot; </span><span class="s2">+ </span><span class="s1">cuvantul</span><span class="s2">); </span><span class="s3">// - dc cuvantul exista in HashMap</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;Descriere : &quot; </span><span class="s2">+ </span><span class="s1">categoriiObiecte</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span><span class="s1">cuvantul</span><span class="s2">));</span>
+        <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;Cuvantul &quot; </span><span class="s2">+ </span><span class="s1">cuvantul </span><span class="s2">+ </span><span class="s5">&quot; nu a fost gasit in HashMap.&quot;</span><span class="s2">); </span><span class="s3">// dc nu exista in HashMap</span>
+        <span class="s2">}</span>
+
+
+    <span class="s2">}</span>
+        <span class="s4">/// Varianta cu &quot;boolean&quot;</span>
+    <span class="s0">public boolean </span><span class="s1">cautaCuvantulHashMap</span><span class="s2">(</span><span class="s1">HashMap</span><span class="s2">&lt;</span><span class="s1">String</span><span class="s2">, </span><span class="s1">String</span><span class="s2">&gt; </span><span class="s1">categoriiObiecte</span><span class="s2">, </span><span class="s1">String cuvant</span><span class="s2">) {  </span><span class="s4">/// declaram o metoda cu parametrii si return</span>
+        <span class="s0">return </span><span class="s1">categoriiObiecte</span><span class="s2">.</span><span class="s1">containsKey</span><span class="s2">(</span><span class="s1">cuvant</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+
+<span class="s2">}</span>
+
+
+
+
+</pre>
+</body>
+</html>

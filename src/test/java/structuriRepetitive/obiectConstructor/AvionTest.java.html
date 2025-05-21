@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>AvionTest.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+AvionTest.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">obiectConstructor</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">testng</span><span class="s2">.</span><span class="s1">annotations</span><span class="s2">.</span><span class="s1">Test</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">AvionTest </span><span class="s2">{</span>
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">metodaAvionTest</span><span class="s2">(){</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;====Exemplul 1 ====&quot;</span><span class="s2">);</span>
+        <span class="s1">Avion Lufthansa </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Avion</span><span class="s2">(</span><span class="s3">&quot;Boeing&quot;</span><span class="s2">, </span><span class="s3">&quot;747&quot;</span><span class="s2">, </span><span class="s3">&quot;PASAGERI&quot;</span><span class="s2">, </span><span class="s3">&quot;SUA&quot;</span><span class="s2">, </span><span class="s4">180</span><span class="s2">, </span><span class="s4">350</span><span class="s2">, </span><span class="s4">5</span><span class="s2">);</span>
+        <span class="s1">Lufthansa</span><span class="s2">.</span><span class="s1">infoAvion</span><span class="s2">();</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;====Exemplul 2 ====&quot;</span><span class="s2">);</span>
+        <span class="s1">Avion WizzAir </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Avion</span><span class="s2">(</span><span class="s3">&quot;Airbus&quot;</span><span class="s2">, </span><span class="s3">&quot;347&quot;</span><span class="s2">, </span><span class="s3">&quot;pasageri&quot;</span><span class="s2">, </span><span class="s3">&quot;Franta&quot;</span><span class="s2">, </span><span class="s4">160</span><span class="s2">, </span><span class="s4">4</span><span class="s2">);</span>
+        <span class="s1">WizzAir</span><span class="s2">.</span><span class="s1">infoAvion</span><span class="s2">();</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

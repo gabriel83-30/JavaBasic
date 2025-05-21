@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Avion.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Avion.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">obiectConstructor</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Avion </span><span class="s2">{</span>
+    <span class="s3">// constructorul are rol sa initializeze variabile unei clase</span>
+    <span class="s3">// recunoastem un constructor dupa numele clasei</span>
+    <span class="s3">// intr-o clasa putem avea &quot; n &quot; constructori care se diferentiaza dupa parametrii</span>
+    <span class="s3">// intr-o clasa exista intotdeauna un constructor default (fara parametrii)</span>
+    <span class="s3">// constructorul trebuie sa fie  public</span>
+    <span class="s3">// obiect = instanta unei clase</span>
+    <span class="s3">// dintr-o clasa putem sa facem mai multe obiecte</span>
+    <span class="s3">// ca sa initializezi un obiect folosim cuvintul cheie &quot; new &quot;</span>
+    <span class="s3">// cand se initializeza un obiect se apeleaza constructorul clasei</span>
+
+    <span class="s0">public </span><span class="s1">String marca</span><span class="s2">;</span>
+    <span class="s0">public </span><span class="s1">String model</span><span class="s2">;</span>
+    <span class="s0">public </span><span class="s1">String tip</span><span class="s2">;</span>
+    <span class="s0">public </span><span class="s1">String taraOrigine</span><span class="s2">;</span>
+    <span class="s0">public </span><span class="s1">Integer capacitatePasageri</span><span class="s2">;</span>
+    <span class="s0">public </span><span class="s1">Integer numarBagaje</span><span class="s2">;</span>
+    <span class="s0">public </span><span class="s1">Integer echipajAvion</span><span class="s2">;</span>
+
+    <span class="s0">public </span><span class="s1">Avion</span><span class="s2">(</span><span class="s1">String marca</span><span class="s2">, </span><span class="s1">String model</span><span class="s2">, </span><span class="s1">String  tip</span><span class="s2">, </span><span class="s1">String taraOrigine</span><span class="s2">, </span><span class="s1">Integer capacitatePasageri</span><span class="s2">, </span><span class="s1">Integer numarBagaje</span><span class="s2">, </span><span class="s1">Integer echipajAvion</span><span class="s2">){</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">marca </span><span class="s2">= </span><span class="s1">marca</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">model </span><span class="s2">= </span><span class="s1">model</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">tip </span><span class="s2">= </span><span class="s1">tip</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">taraOrigine </span><span class="s2">= </span><span class="s1">taraOrigine</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">capacitatePasageri </span><span class="s2">= </span><span class="s1">capacitatePasageri</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">numarBagaje </span><span class="s2">= </span><span class="s1">numarBagaje</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">echipajAvion </span><span class="s2">=</span><span class="s1">echipajAvion</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+
+    <span class="s0">public </span><span class="s1">Avion</span><span class="s2">(</span><span class="s1">String marca</span><span class="s2">, </span><span class="s1">String model</span><span class="s2">, </span><span class="s1">String tip</span><span class="s2">, </span><span class="s1">String taraOrigine</span><span class="s2">, </span><span class="s1">Integer capacitatePasageri</span><span class="s2">, </span><span class="s1">Integer echipajAvion</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">marca </span><span class="s2">= </span><span class="s1">marca</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">model </span><span class="s2">= </span><span class="s1">model</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">tip </span><span class="s2">= </span><span class="s1">tip</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">taraOrigine </span><span class="s2">= </span><span class="s1">taraOrigine</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">capacitatePasageri </span><span class="s2">= </span><span class="s1">capacitatePasageri</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">echipajAvion </span><span class="s2">= </span><span class="s1">echipajAvion</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">infoAvion</span><span class="s2">(){</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; Marca avionului este: &quot; </span><span class="s2">+ </span><span class="s1">marca</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; Modelul avionului este: &quot; </span><span class="s2">+ </span><span class="s1">model</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; Tipul avionului este: &quot; </span><span class="s2">+ </span><span class="s1">tip</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; Tara de origine a avionului este: &quot; </span><span class="s2">+ </span><span class="s1">taraOrigine</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; Capacitatea de pasageri a avionului este: &quot; </span><span class="s2">+ </span><span class="s1">capacitatePasageri</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; Echipajul avionului este de: &quot; </span><span class="s2">+ </span><span class="s1">echipajAvion </span><span class="s2">+ </span><span class="s4">&quot; persoane.&quot;</span><span class="s2">);</span>
+        <span class="s0">if</span><span class="s2">(</span><span class="s1">numarBagaje </span><span class="s2">!= </span><span class="s0">null </span><span class="s2">) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Numarul de bagaje suportat de avion este : &quot; </span><span class="s2">+ </span><span class="s1">numarBagaje</span><span class="s2">);</span>
+        <span class="s2">}</span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Avionul nu are bagaje.&quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

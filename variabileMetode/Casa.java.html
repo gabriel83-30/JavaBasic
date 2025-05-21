@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Casa.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Casa.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">variabileMetode</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">testng</span><span class="s2">.</span><span class="s1">annotations</span><span class="s2">.</span><span class="s1">Test</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Locale</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Casa </span><span class="s2">{ </span><span class="s3">// numele clasei</span>
+
+    <span class="s3">// declaram variabile globale</span>
+    <span class="s1">String culoareCasei </span><span class="s2">= </span><span class="s4">&quot;Alb&quot;</span><span class="s2">;</span>
+    <span class="s0">int </span><span class="s1">numarEtaje </span><span class="s2">= </span><span class="s5">2</span><span class="s2">;</span>
+    <span class="s0">double </span><span class="s1">suprafataCasei </span><span class="s2">= </span><span class="s5">120.50</span><span class="s2">;</span>
+
+
+<span class="s3">// declaram metoda void fara parametrii</span>
+    <span class="s0">public void </span><span class="s1">afiseazaDetalii</span><span class="s2">() {</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Culoarea casei este &quot; </span><span class="s2">+ </span><span class="s1">culoareCasei </span><span class="s2">+ </span><span class="s4">&quot;, are &quot; </span><span class="s2">+ </span><span class="s1">numarEtaje </span><span class="s2">+ </span><span class="s4">&quot; etaje &quot; </span><span class="s2">+ </span><span class="s4">&quot;si suprafata casei este de &quot; </span><span class="s2">+ </span><span class="s1">suprafataCasei </span><span class="s2">+ </span><span class="s4">&quot; metrii patrati.&quot;</span><span class="s2">);</span>
+
+        <span class="s3">// declaram variabile locale</span>
+        <span class="s1">String strada </span><span class="s2">= </span><span class="s4">&quot;Principala&quot;</span><span class="s2">;</span>
+        <span class="s1">String zona </span><span class="s2">= </span><span class="s4">&quot;Rezidentiala&quot;</span><span class="s2">;</span>
+        <span class="s0">int </span><span class="s1">numarCasa </span><span class="s2">= </span><span class="s5">800</span><span class="s2">;</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Casa este pe strada &quot; </span><span class="s2">+ </span><span class="s1">strada </span><span class="s2">+ </span><span class="s4">&quot;,la numarul &quot; </span><span class="s2">+ </span><span class="s1">numarCasa </span><span class="s2">+ </span><span class="s4">&quot; in zona &quot; </span><span class="s2">+ </span><span class="s1">zona</span><span class="s2">.</span><span class="s1">toUpperCase</span><span class="s2">(</span><span class="s1">Locale</span><span class="s2">.</span><span class="s1">ROOT</span><span class="s2">) + </span><span class="s4">&quot;.&quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+<span class="s3">// declaram metoda void cu parametrii</span>
+    <span class="s0">public void </span><span class="s1">schimbareCuloare</span><span class="s2">(</span><span class="s1">String nouaCuloare</span><span class="s2">) {</span>
+        <span class="s1">culoareCasei </span><span class="s2">= </span><span class="s1">nouaCuloare</span><span class="s2">;</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Culoarea casei a fost schimbata in&quot; </span><span class="s2">+ </span><span class="s1">nouaCuloare </span><span class="s2">+ </span><span class="s4">&quot;.&quot;</span><span class="s2">);</span>
+
+    <span class="s2">}</span>
+
+<span class="s3">//    declaram metoda tip return fara parametrii</span>
+    <span class="s0">public int </span><span class="s1">getNumarEtaje</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">numarEtaje</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+
+<span class="s3">//    declaram metoda tip return cu parametrii</span>
+    <span class="s0">public double </span><span class="s1">calculeazaPret</span><span class="s2">(</span><span class="s0">double </span><span class="s1">pretPerMetruPatrat</span><span class="s2">){</span>
+        <span class="s0">return </span><span class="s1">suprafataCasei </span><span class="s2">* </span><span class="s1">pretPerMetruPatrat</span><span class="s2">;</span>
+
+    <span class="s2">}</span>
+
+    <span class="s1">@Test </span><span class="s3">// apelam metodele si variabilele</span>
+    <span class="s0">public void </span><span class="s1">testCasa</span><span class="s2">(){</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Metoda TEST CASA afisare in consola toate variabilele si metodele: &quot;</span><span class="s2">);</span>
+
+        <span class="s3">// Apelam variabilele globale</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Culoarea casei este &quot; </span><span class="s2">+ </span><span class="s1">culoareCasei</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Casa are &quot; </span><span class="s2">+ </span><span class="s1">numarEtaje </span><span class="s2">+ </span><span class="s4">&quot; etaje.&quot;</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Suprafata casei este &quot; </span><span class="s2">+ </span><span class="s1">suprafataCasei</span><span class="s2">);</span>
+
+        <span class="s3">// apelam metodele</span>
+
+        <span class="s1">afiseazaDetalii</span><span class="s2">();</span>
+        <span class="s1">schimbareCuloare</span><span class="s2">(</span><span class="s4">&quot; Gri antracit&quot;</span><span class="s2">);</span>
+        <span class="s1">afiseazaDetalii</span><span class="s2">();</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Numar etaje returnat: &quot; </span><span class="s2">+ </span><span class="s1">getNumarEtaje</span><span class="s2">());</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Pret estimat al casei: &quot; </span><span class="s2">+ </span><span class="s1">calculeazaPret</span><span class="s2">(</span><span class="s5">1250.5</span><span class="s2">) + </span><span class="s4">&quot; EURO&quot;</span><span class="s2">);</span>
+
+
+    <span class="s2">}</span>
+
+<span class="s2">}</span>
+
+
+
+
+
+</pre>
+</body>
+</html>
