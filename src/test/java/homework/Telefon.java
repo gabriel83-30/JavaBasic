@@ -1,6 +1,6 @@
 package homework;
 
-public class Telefon {
+public abstract class Telefon {
     // de facut OOP ASEMANATOR CU EXEMPLUL DE CURS:
     // MOSTENIRE,
     // POLIMORFISM,
